@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body{
+    background-color: #e3f2fd;
+}
+.container{
+    border-radius: 8px;
+    position: relative;
+    margin: 80px auto 30px;
+    max-width: 320px;
+    width: 100%;
+}
+.select_btn{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+.select_btn .btn_text{
+    color: #333;
+    font-size: 19px;
+    font-weight: 400;
+}
+.select_btn .arrow_dwn{
+    align-items: center;
+    border-radius: 50%;
+    background-color: #6e93f7;
+    color: #fff;
+    display: flex;
+    font-size: 14px;
+    height: 21px;
+    justify-content: center;
+    transition: 0.3s;
+    width: 21PX;
+}
+.select_btn.open .arrow_dwn{
+    transform: rotate(-180deg);
+}
+.list_items{
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: none;
+    margin-top: 15px;
+    padding: 16px;
+    position: relative;
+}
+.select_btn.open ~ .list_items{
+    display: block;
+}
+.list_items .item{
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 50px;
+    padding: 0 15px;
+    transition: all .3s;
+}
+.list_items .item:hover{
+    background-color: #e7edfe;
+}
+.item .item_text{
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+}
+.item .checkbox{
+    align-items: center;
+    border: 1.5px solid #c0c0c0;
+    border-radius: 4px;
+    display: flex;
+    height: 16px;
+    justify-content: center;
+    margin-right: 12px;
+    transition: all 0.3s ease-in-out;
+    width: 16px;
+}
+.item.checked .checkbox{
+    background-color: #4070f4;
+    border-color: #4070f4;
+}
+.checkbox .check_icon{
+    color: #fff;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out
+}
+.item.checked .check_icon{
+    transform: scale(1);
+}
